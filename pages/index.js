@@ -33,6 +33,7 @@ export default function Home() {
       return item
     }
     ))
+    console.log(items)
     setNfts(items)
     setLoadingState('loaded')
   }

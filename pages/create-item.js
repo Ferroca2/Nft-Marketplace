@@ -47,7 +47,7 @@ export default function CreateItem () {
       const signer = provider.getSigner()
 
       let contract = new ethers.Contract(nftaddress, NFT.abi, signer)
-      let transaction = contract.createToken(url)
+      let transaction = await contract.createToken(url)
       let tx = await transaction.wait()
 
       let event =  tx.events[0]
